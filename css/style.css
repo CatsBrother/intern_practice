@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 16px;
+}
+body{
+    height: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+nav{
+    padding: 10px;
+    border-bottom: solid 1px #ccc;
+}
+nav a{
+    float: left;
+    margin-right: 10px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav a:hover{
+    font-weight: bold;
+    color: #ff397e;
+    text-decoration: underline;
+}
+
+form{
+    width: 100%;
+    padding: 5px;
+    border-bottom: solid 1px #ccc;
+    overflow: hidden;
+}
+form button{
+    float: left;
+    border: none;
+    padding: 5px;
+    padding-left: 20px;
+    background-color: #fff;
+}
+form input{
+    border: none;
+    float: left;
+    height: 30px;
+    width: 80%;
+    clear: right;
+}
+
+.content{
+    position: relative;
+    padding-left: 6rem;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+}
+.goods{
+    height: calc(100vh - 100px);
+    overflow: scroll;
+}
+.list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 6rem;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+}
+.list li:hover{
+    background-color: #ff397e;
+}
+.list li{
+    text-align: center;
+    border-bottom: solid 1px #eee;
+    border-right: solid 1px #eee;
+}
+.list a{
+    font: 14px/50px Sans-serif;
+}
+.content img{
+    width: 100%;
+}
+h1{
+    font:16px/50px Sans-serif;
+    text-align: center;
+}
+h3{
+    font:14px/40px Sans-serif;
+    text-align: center;
+}
+.gift_goods ul,
+.hot_goods ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: solid 1px #eee;
+}
+.gift_goods li,
+.hot_goods li{
+    width: 30%;
+}
