@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen and (min-width:300px) and (max-width:600px)"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
     <nav>
@@ -144,6 +144,22 @@
                 </div>
             </div>
         </div>
+        <script>
+            var currClientWidth,fontValue,originWidth;
+            //originWidth用来设置设计稿原型的屏幕宽度（这里是以 Iphone 6为原型的设计稿）
+            originWidth=375;
+            __resize();
+            //注册 resize事件
+            window.addEventListener('resize', __resize, false);
+            function __resize() {
+                currClientWidth = document.documentElement.clientWidth;
+                //这里是设置屏幕的最大和最小值时候给一个默认值
+                if (currClientWidth>640){currClientWidth = 640};
+                if (currClientWidth<320){currClientWidth = 320};
+                fontValue = ((62.5 * currClientWidth) /originWidth).toFixed(2);
+                document.documentElement.style.fontSize = fontValue + '%';
+            }
+        </script>
     </div>
 </body>
 </html>

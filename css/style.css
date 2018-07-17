@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-size: 16px;
 }
 body{
     height: 100%;
@@ -21,6 +20,7 @@ nav{
 nav a{
     float: left;
     margin-right: 10px;
+    font-size: 1.8rem;
 }
 nav ul{
     display: flex;
@@ -55,7 +55,7 @@ form input{
 
 .content{
     position: relative;
-    padding-left: 6rem;
+    padding-left: 8rem;
     height: calc(100vh - 100px);
     overflow: hidden;
 }
@@ -68,7 +68,7 @@ form input{
     top: 0;
     left: 0;
     bottom: 0;
-    width: 6rem;
+    width: 8rem;
     height: calc(100vh - 100px);
     overflow-y: scroll;
 }
@@ -81,17 +81,17 @@ form input{
     border-right: solid 1px #eee;
 }
 .list a{
-    font: 14px/50px Sans-serif;
+    font: 1.5rem/4.5rem Sans-serif;
 }
 .content img{
     width: 100%;
 }
 h1{
-    font:16px/50px Sans-serif;
+    font:1.8rem/5rem Sans-serif;
     text-align: center;
 }
 h3{
-    font:14px/40px Sans-serif;
+    font:1.5rem/3rem Sans-serif;
     text-align: center;
 }
 .gift_goods ul,
