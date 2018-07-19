@@ -1,0 +1,21 @@
+const nav_nav = document.getElementsByClassName("nav_nav")[0];
+const list_list = document.getElementsByClassName("list_list")[0]
+nav_nav.onclick = function(e){
+    let nav_active = document.getElementById("nav_active");
+    let t = e.target;
+    if(t.id != "nav_active"){
+        nav_active.id = "";
+        t.id = "nav_active";
+    }
+}
+list_list.onclick = function(e){
+    let content_active = document.getElementById("content_active");
+    let t = e.target;
+    if(t.parentNode.className != "list_list"){
+        t = t.parentNode;
+    } 
+    if(t.id != "content_active"){
+        content_active.id = "";
+        t.id = "content_active";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+    }
+}

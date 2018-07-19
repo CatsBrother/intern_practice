@@ -26,7 +26,7 @@ nav ul{
     display: flex;
     justify-content: center;
 }
-nav a:hover{
+#nav_active{
     font-weight: bold;
     color: #ff397e;
     text-decoration: underline;
@@ -72,8 +72,11 @@ form input{
     height: calc(100vh - 100px);
     overflow-y: scroll;
 }
-.list li:hover{
+#content_active{
     background-color: #ff397e;
+}
+#content_active a{
+    color: #fff;
 }
 .list li{
     text-align: center;
@@ -86,9 +89,18 @@ form input{
 .content img{
     width: 100%;
 }
-h1{
-    font:1.8rem/5rem Sans-serif;
+.title{
     text-align: center;
+}
+h1{
+    font:1.8rem Sans-serif;
+    padding: 0.5rem;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
 }
 h3{
     font:1.5rem/3rem Sans-serif;
@@ -98,10 +110,20 @@ h3{
 .hot_goods ul{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;                                                                                                                                                                                                                                                                                                                                                                                                                 
     border-bottom: solid 1px #eee;
 }
 .gift_goods li,
 .hot_goods li{
     width: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.line{
+    width: 12rem;
+    border-bottom: solid 1px #666;
+    margin: 2rem auto;
+    margin-bottom: -1.5rem;
+    display: block;
 }

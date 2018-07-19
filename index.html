@@ -6,13 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>
+        var currClientWidth,fontValue,originWidth;
+        //originWidth用来设置设计稿原型的屏幕宽度（这里是以 Iphone 6为原型的设计稿）
+        originWidth=375;
+        __resize();
+        //注册 resize事件
+        window.addEventListener('resize', __resize, false);
+        function __resize() {
+            currClientWidth = document.documentElement.clientWidth;
+            //这里是设置屏幕的最大和最小值时候给一个默认值
+            if (currClientWidth>640){currClientWidth = 640};
+            if (currClientWidth<320){currClientWidth = 320};
+            fontValue = ((62.5 * currClientWidth) /originWidth).toFixed(2);
+            document.documentElement.style.fontSize = fontValue + '%';
+        }
+    </script>
 </head>
 <body>
     <nav>
         <a href="#"><img src="img/1.gif" alt=""></a>
         <a href="#"><img src="img/2.gif" alt=""></a>
-        <ul>
-            <li><a href="#">分类</a></li>
+        <ul class="nav_nav">
+            <li><a href="#" id="nav_active">分类</a></li>
             <li><a href="#">品牌</a></li>
             <li><a href="#">年龄</a></li>
         </ul>
@@ -23,9 +39,9 @@
     </form>
     <div class="content">
         <div class="list">
-            <ul>
+            <ul class="list_list">
                 <li><a href="#">热门推荐</a></li>
-                <li><a href="#">全球购</a></li>
+                <li id="content_active"><a href="#">全球购</a></li>
                 <li><a href="#">奶粉尿裤</a></li>
                 <li><a href="#">辅食零食</a></li>
                 <li><a href="#">童装童鞋</a></li>
@@ -40,7 +56,10 @@
         </div>
         <div class="goods">
             <div class="gift">
-                <h1>礼品精选</h1>
+                <div class="line"></div>
+                <div class="title">
+                    <h1>礼品精选</h1>
+                </div>
                 <div class="gift_goods">
                     <ul>
                         <li>
@@ -83,7 +102,10 @@
                 </div>
             </div>
             <div class="hot">
-                <h1>热门大牌</h1>
+                <div class="line"></div>
+                <div class="title">
+                    <h1>热门大牌</h1>
+                </div>
                 <div class="hot_goods">
                     <ul>
                         <li>
@@ -144,22 +166,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            var currClientWidth,fontValue,originWidth;
-            //originWidth用来设置设计稿原型的屏幕宽度（这里是以 Iphone 6为原型的设计稿）
-            originWidth=375;
-            __resize();
-            //注册 resize事件
-            window.addEventListener('resize', __resize, false);
-            function __resize() {
-                currClientWidth = document.documentElement.clientWidth;
-                //这里是设置屏幕的最大和最小值时候给一个默认值
-                if (currClientWidth>640){currClientWidth = 640};
-                if (currClientWidth<320){currClientWidth = 320};
-                fontValue = ((62.5 * currClientWidth) /originWidth).toFixed(2);
-                document.documentElement.style.fontSize = fontValue + '%';
-            }
-        </script>
+        <script src="js/script.js"></script>
     </div>
 </body>
 </html>
